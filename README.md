@@ -1,3 +1,5 @@
+**English** · [Français](README.fr.md)
+
 <p align="center">
   <img src="assets/header-banner.jpg" alt="Claude Code Filmmaker" width="100%"/>
 </p>
@@ -6,7 +8,7 @@ Not a developer tutorial. Not a prompt engineering guide. This is a real, opinio
 
 **Config. Patterns. Hooks. Remote access. Everything in one place.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm_Noncommercial-yellow.svg)](LICENSE.md)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-Opus_4.6-blueviolet?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-109-green?style=flat-square)
 ![Personas](https://img.shields.io/badge/Agent_Personas-38-orange?style=flat-square)

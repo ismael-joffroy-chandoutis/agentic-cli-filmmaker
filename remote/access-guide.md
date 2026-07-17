@@ -386,4 +386,4 @@ Tailscale mesh network, tmux session management, Claude Code Max plan.
 ---
 
 *Part of my ongoing writing on AI tools for creative and filmmaking workflows.*
-*[More at github.com/12georgiadis](https://github.com/12georgiadis)*
+*[More at github.com/ismael-joffroy-chandoutis](https://github.com/ismael-joffroy-chandoutis)*

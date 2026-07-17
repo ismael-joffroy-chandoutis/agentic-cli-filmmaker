@@ -43,7 +43,7 @@ git reset --hard origin/master
 Each machine has its own `~/.ssh/id_ed25519` added to GitHub SSH keys. When setting up a new machine:
 
 ```bash
-ssh-keygen -t ed25519 -C "machine-name@12georgiadis" -f ~/.ssh/id_ed25519 -N ""
+ssh-keygen -t ed25519 -C "machine-name@ismael-joffroy-chandoutis" -f ~/.ssh/id_ed25519 -N ""
 cat ~/.ssh/id_ed25519.pub
 # Add to https://github.com/settings/ssh/new
 ```
@@ -52,7 +52,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 git config --global user.name "Ismaël Joffroy Chandoutis"
-git config --global user.email "13225628+12georgiadis@users.noreply.github.com"
+git config --global user.email "13225628+ismael-joffroy-chandoutis@users.noreply.github.com"
 ```
 
 ## Remote Desktop (Mac Mini)
