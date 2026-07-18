@@ -6,6 +6,8 @@ Not a developer tutorial. Not a prompt engineering guide. This is a real, opinio
 
 **Config. Patterns. Hooks. Remote access. Everything in one place.**
 
+The method is CLI-agnostic. This field note documents the current instance, Claude Code; when the practice moves, the next field note will document the next instrument.
+
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm_Noncommercial-yellow.svg)](LICENSE.md)
 ![Agentic CLI](https://img.shields.io/badge/Agentic_CLI-daily_driver-blueviolet?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-109-green?style=flat-square)

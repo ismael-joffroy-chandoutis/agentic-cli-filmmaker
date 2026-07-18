@@ -6,6 +6,8 @@ Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un
 
 **Config. Patterns. Hooks. Accès distant. Tout au même endroit.**
 
+La méthode est agnostique au CLI. Cette note de terrain documente l'instance actuelle, Claude Code ; quand la pratique bougera, la note de terrain suivante documentera l'instrument suivant.
+
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm_Noncommercial-yellow.svg)](LICENSE.md)
 ![CLI agentique](https://img.shields.io/badge/CLI_agentique-outil_quotidien-blueviolet?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-109-green?style=flat-square)
