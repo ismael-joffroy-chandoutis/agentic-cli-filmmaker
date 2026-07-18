@@ -2,12 +2,12 @@
 
 **English** · [Français](README.fr.md)
 
-Not a developer tutorial. Not a prompt engineering guide. This is a real, opinionated setup built by an artist who uses Claude Code every day for filmmaking, creative tools, and vibe coding.
+Not a developer tutorial. Not a prompt engineering guide. This is a real, opinionated setup built by an artist who uses an agentic coding CLI every day for filmmaking, creative tools, and vibe coding.
 
 **Config. Patterns. Hooks. Remote access. Everything in one place.**
 
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm_Noncommercial-yellow.svg)](LICENSE.md)
-![Claude Code](https://img.shields.io/badge/Claude_Code-Opus_4.6-blueviolet?style=flat-square)
+![Agentic CLI](https://img.shields.io/badge/Agentic_CLI-daily_driver-blueviolet?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-109-green?style=flat-square)
 ![Personas](https://img.shields.io/badge/Agent_Personas-38-orange?style=flat-square)
 
@@ -15,7 +15,7 @@ Not a developer tutorial. Not a prompt engineering guide. This is a real, opinio
 
 ## Context
 
-I'm [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com), a filmmaker and artist based in Paris. I work across cinema, contemporary art, and new media. I'm not a developer. I use Claude Code as a creative and technical partner to build tools, automate workflows, and explore AI as an artistic method.
+I'm [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com), a filmmaker and artist based in Paris. I work across cinema, contemporary art, and new media. I'm not a developer. I use an agentic coding CLI as a creative and technical partner to build tools, automate workflows, and explore AI as an artistic method.
 
 This repo documents the actual configuration, decisions, and patterns that emerged from daily usage since January 2026. Everything here is tested in production (my production, which is making films and art).
 
@@ -27,10 +27,10 @@ This repo documents the actual configuration, decisions, and patterns that emerg
 
 ```
 claude-code-filmmaker/
-├── config/       # CLAUDE.md structure, settings.json annotated
+├── config/       # Global instructions structure, settings.json annotated
 ├── patterns/     # 14 reusable patterns (tmux, memory, notifications, agent teams...)
 ├── hooks/        # Push notifications, auto tab naming, tmux layout management
-├── remote/       # Every way to run Claude Code remotely — compared
+├── remote/       # Every way to run the agent remotely — compared
 ├── setup/        # Full inventory: 109 skills, 38 personas, 40+ plugins
 ├── essays/       # Writing from this practice
 ├── journal/      # Decisions log
@@ -45,11 +45,11 @@ How the agent is configured, and why.
 
 | File | What it covers |
 |------|---------------|
-| [CLAUDE.md structure](config/claude-md-structure.md) | The global instructions file: identity, workflows, 7 quality rules (anti-hallucination, scrap-and-redo, self-updating rules, confrontation mode...) |
+| [Instructions file structure](config/claude-md-structure.md) | The global instructions file: identity, workflows, 7 quality rules (anti-hallucination, scrap-and-redo, self-updating rules, confrontation mode...) |
 | [Settings explained](config/settings-explained.md) | Every `settings.json` choice annotated: privacy (telemetry off), deny rules (minimal: only block the irreversible), statusline, agent teams, extended thinking |
 
 **Key decisions:**
-- Deny rules are minimal by design: only block irreversible commands. The `claude` (interactive permissions) vs `clauded` (bypass) separation handles daily control.
+- Deny rules are minimal by design: only block irreversible commands. The interactive-permissions vs bypass separation handles daily control.
 - Telemetry fully disabled (Trail of Bits approach).
 - Extended thinking always on.
 - Conversation history kept 365 days instead of 30.
@@ -62,26 +62,26 @@ How the agent is configured, and why.
 
 | Pattern | What it solves |
 |---------|---------------|
-| [Max Plan vs API](patterns/max-vs-api.md) | When Claude Code Max ($200/mo) pays off vs API. Real usage data and breakeven analysis. |
+| [Max Plan vs API](patterns/max-vs-api.md) | When the Max plan ($200/mo) pays off vs API. Real usage data and breakeven analysis. |
 | [tmux Survival Guide](patterns/tmux-survival.md) | Never lose a session. Multi-machine setup, remote access, recovery after reboot. |
-| [Telegram Bridge](patterns/telegram-bridge.md) | Control Claude Code from your phone via Telegram. Bidirectional: text, voice, images, files. |
+| [Telegram Bridge](patterns/telegram-bridge.md) | Control the agent from your phone via Telegram. Bidirectional: text, voice, images, files. |
 | [Notifications](patterns/notifications.md) | Get notified when tasks finish. Sound (Zelda!) + push (Pushover/Telegram/macOS). |
 | [Statusline](patterns/statusline.md) | Two-line status bar: model, context usage, cost, duration, cache %, lines changed. |
 | [Scripts Toolkit](patterns/scripts-toolkit.md) | All automation scripts: bootstrap, dashboard, heartbeat, cost calculator, memory search. |
 | [Memory System](patterns/memory-system.md) | Persistent memory across sessions. Daily logs, backlog tracking, Spotlight search. |
-| [Resume Sessions](patterns/resume-sessions.md) | Restore all tmux windows after a reboot with `claude --resume`. One script. |
+| [Resume Sessions](patterns/resume-sessions.md) | Restore all tmux windows after a reboot with one resume command. One script. |
 | [Cross-Platform](patterns/cross-platform.md) | macOS, Linux, Windows (WSL2). Platform abstraction layer and setup guide. |
 | [Agent Layout Monitoring](patterns/agent-layout-monitoring.md) | Monitor subagent activity in real-time. Split-pane layout, tmux hooks, live tail. |
 | [Multi-Machine Setup](patterns/multi-machine.md) | MacBook + Mac Mini + PC on Tailscale. SSH/mosh, git sync, source of truth. |
 | [Ghostty + cmux](patterns/ghostty-cmux.md) | GPU terminal + native tmux. Auto-restore all windows on reboot, no AppleScript. |
 | [Agent Teams](patterns/agent-teams.md) | Peer-to-peer multi-agent coordination. Task list sharing, messaging, shutdown flow. |
-| [VO Analysis Pipeline](patterns/vo-analysis-pipeline.md) | Voice-over analysis for documentary production. Local ASR → Gemini → codex update. |
+| [VO Analysis Pipeline](patterns/vo-analysis-pipeline.md) | Voice-over analysis for documentary production. Local ASR, LLM analysis, structured update. |
 
 ---
 
 ## Hooks
 
-Drop-in automation scripts for Claude Code hooks.
+Drop-in automation scripts for agent hooks.
 
 | Script | What it does |
 |--------|-------------|
@@ -102,7 +102,7 @@ chmod +x ~/.claude/scripts/*.sh
 
 ## Remote Access
 
-[Every way to run Claude Code remotely](remote/access-guide.md) — from iPhone, tablet, or another machine. Real-world comparison, not a spec sheet.
+[Every way to run the agent remotely](remote/access-guide.md) — from iPhone, tablet, or another machine. Real-world comparison, not a spec sheet.
 
 | Method | Mobile UX | Reliability | Setup |
 |--------|-----------|-------------|-------|
@@ -110,7 +110,7 @@ chmod +x ~/.claude/scripts/*.sh
 | Mosh + tmux | Fair | Best | Medium |
 | Telegram Bot Bridge | Good | Good | High |
 | OpenClaw (iOS app) | Good | Good | Low |
-| Claude Remote Control | Best | Beta | Low |
+| Native Remote Control | Best | Beta | Low |
 | Remote Desktop (AnyDesk/Jump) | Fair | Good | Low |
 
 ---
@@ -136,7 +136,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 
 **Specs before code.** Every project starts with an interview phase. No implementation without specs. Two custom skills enforce this: `/interview` and `/pitch`.
 
-**7 quality rules** baked into CLAUDE.md:
+**7 quality rules** baked into the global instructions file:
 
 1. **Anti-hallucination** — never use simulated, invented, or approximate data
 2. **Return to plan mode** — if a fix fails, stop. Don't spiral. Re-plan.
@@ -152,7 +152,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 
 | Layer | Tools |
 |-------|-------|
-| **AI** | Claude Code Max ($200/mo), Opus 4.6 + Sonnet 4.6, Agent Teams |
+| **AI** | Max plan ($200/mo), frontier models, Agent Teams |
 | **Terminal** | Ghostty (GPU), tmux, cmux |
 | **Hardware** | MacBook Air M3 + Mac Mini M4 (24/7) + PC RTX 5090 |
 | **Network** | Tailscale mesh VPN, mosh |
@@ -187,7 +187,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 ## Influences
 
 - [Trail of Bits](https://github.com/trailofbits/claude-code-config) — opinionated security defaults
-- [@bcherny](https://x.com/bcherny) (Claude Code creator) — team tips
+- [@bcherny](https://x.com/bcherny) (the CLI's creator) — team tips
 - [@gmoneyNFT](https://x.com/gmoneyNFT) — 25 lessons from daily multi-agent usage
 - [@__BOMO](https://x.com/__BOMO) — context window statusline
 

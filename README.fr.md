@@ -2,12 +2,12 @@
 
 [English](README.md) · **Français**
 
-Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un vrai setup, personnel, construit par un artiste qui utilise Claude Code tous les jours pour le cinéma, les outils créatifs et le vibe coding.
+Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un vrai setup, personnel, construit par un artiste qui utilise un CLI de code agentique tous les jours pour le cinéma, les outils créatifs et le vibe coding.
 
 **Config. Patterns. Hooks. Accès distant. Tout au même endroit.**
 
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm_Noncommercial-yellow.svg)](LICENSE.md)
-![Claude Code](https://img.shields.io/badge/Claude_Code-Opus_4.6-blueviolet?style=flat-square)
+![CLI agentique](https://img.shields.io/badge/CLI_agentique-outil_quotidien-blueviolet?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-109-green?style=flat-square)
 ![Personas](https://img.shields.io/badge/Agent_Personas-38-orange?style=flat-square)
 
@@ -15,7 +15,7 @@ Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un
 
 ## Contexte
 
-Je suis [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com), cinéaste et artiste basé à Paris. Je travaille entre cinéma, art contemporain et nouveaux médias. Je ne suis pas développeur. J'utilise Claude Code comme partenaire créatif et technique pour construire des outils, automatiser des workflows et explorer l'IA comme méthode artistique.
+Je suis [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com), cinéaste et artiste basé à Paris. Je travaille entre cinéma, art contemporain et nouveaux médias. Je ne suis pas développeur. J'utilise un CLI de code agentique comme partenaire créatif et technique pour construire des outils, automatiser des workflows et explorer l'IA comme méthode artistique.
 
 Ce dépôt documente la configuration réelle, les décisions et les patterns qui ont émergé d'un usage quotidien depuis janvier 2026. Tout ici est testé en production (ma production, c'est-à-dire faire des films et de l'art).
 
@@ -27,10 +27,10 @@ Ce dépôt documente la configuration réelle, les décisions et les patterns qu
 
 ```
 claude-code-filmmaker/
-├── config/       # Structure du CLAUDE.md, settings.json annoté
+├── config/       # Structure des instructions globales, settings.json annoté
 ├── patterns/     # 14 patterns réutilisables (tmux, mémoire, notifications, agent teams...)
 ├── hooks/        # Notifications push, nommage auto des onglets, gestion du layout tmux
-├── remote/       # Toutes les façons de faire tourner Claude Code à distance — comparées
+├── remote/       # Toutes les façons de faire tourner l'agent à distance — comparées
 ├── setup/        # Inventaire complet : 109 skills, 38 personas, 40+ plugins
 ├── essays/       # Textes issus de cette pratique
 ├── journal/      # Journal des décisions
@@ -45,11 +45,11 @@ Comment l'agent est configuré, et pourquoi.
 
 | Fichier | Ce qu'il couvre |
 |------|---------------|
-| [Structure du CLAUDE.md](config/claude-md-structure.md) | Le fichier d'instructions globales : identité, workflows, 7 règles de qualité (anti-hallucination, scrap-and-redo, règles auto-actualisées, mode confrontation...) |
+| [Structure du fichier d'instructions](config/claude-md-structure.md) | Le fichier d'instructions globales : identité, workflows, 7 règles de qualité (anti-hallucination, scrap-and-redo, règles auto-actualisées, mode confrontation...) |
 | [Settings expliqués](config/settings-explained.md) | Chaque choix de `settings.json` annoté : confidentialité (télémétrie coupée), règles de refus (minimales : ne bloquer que l'irréversible), statusline, agent teams, extended thinking |
 
 **Décisions clés :**
-- Les règles de refus sont minimales par design : ne bloquer que les commandes irréversibles. La séparation `claude` (permissions interactives) vs `clauded` (bypass) gère le contrôle au quotidien.
+- Les règles de refus sont minimales par design : ne bloquer que les commandes irréversibles. La séparation permissions interactives vs bypass gère le contrôle au quotidien.
 - Télémétrie entièrement désactivée (approche Trail of Bits).
 - Extended thinking toujours activé.
 - Historique de conversation conservé 365 jours au lieu de 30.
@@ -62,26 +62,26 @@ Comment l'agent est configuré, et pourquoi.
 
 | Pattern | Ce qu'il résout |
 |---------|---------------|
-| [Max Plan vs API](patterns/max-vs-api.md) | Quand Claude Code Max (200$/mois) est rentable face à l'API. Données d'usage réelles et analyse du seuil de rentabilité. |
+| [Max Plan vs API](patterns/max-vs-api.md) | Quand le plan Max (200$/mois) est rentable face à l'API. Données d'usage réelles et analyse du seuil de rentabilité. |
 | [Guide de survie tmux](patterns/tmux-survival.md) | Ne jamais perdre une session. Setup multi-machines, accès distant, récupération après reboot. |
-| [Pont Telegram](patterns/telegram-bridge.md) | Piloter Claude Code depuis son téléphone via Telegram. Bidirectionnel : texte, voix, images, fichiers. |
+| [Pont Telegram](patterns/telegram-bridge.md) | Piloter l'agent depuis son téléphone via Telegram. Bidirectionnel : texte, voix, images, fichiers. |
 | [Notifications](patterns/notifications.md) | Être notifié quand une tâche se termine. Son (Zelda !) + push (Pushover/Telegram/macOS). |
 | [Statusline](patterns/statusline.md) | Barre de statut sur deux lignes : modèle, usage du contexte, coût, durée, % de cache, lignes modifiées. |
 | [Boîte à outils de scripts](patterns/scripts-toolkit.md) | Tous les scripts d'automatisation : bootstrap, dashboard, heartbeat, calculateur de coût, recherche mémoire. |
 | [Système de mémoire](patterns/memory-system.md) | Mémoire persistante entre sessions. Logs quotidiens, suivi du backlog, recherche Spotlight. |
-| [Reprise des sessions](patterns/resume-sessions.md) | Restaurer toutes les fenêtres tmux après un reboot avec `claude --resume`. Un seul script. |
+| [Reprise des sessions](patterns/resume-sessions.md) | Restaurer toutes les fenêtres tmux après un reboot avec une seule commande de reprise. Un seul script. |
 | [Multi-plateforme](patterns/cross-platform.md) | macOS, Linux, Windows (WSL2). Couche d'abstraction et guide d'installation. |
 | [Monitoring du layout des agents](patterns/agent-layout-monitoring.md) | Surveiller l'activité des subagents en temps réel. Layout en split, hooks tmux, tail en direct. |
 | [Setup multi-machines](patterns/multi-machine.md) | MacBook + Mac Mini + PC sur Tailscale. SSH/mosh, sync git, source de vérité. |
 | [Ghostty + cmux](patterns/ghostty-cmux.md) | Terminal GPU + tmux natif. Restauration automatique de toutes les fenêtres au reboot, sans AppleScript. |
 | [Agent Teams](patterns/agent-teams.md) | Coordination multi-agents pair à pair. Partage de liste de tâches, messagerie, procédure d'arrêt. |
-| [Pipeline d'analyse de voix off](patterns/vo-analysis-pipeline.md) | Analyse de voix off pour production documentaire. ASR local → Gemini → mise à jour codex. |
+| [Pipeline d'analyse de voix off](patterns/vo-analysis-pipeline.md) | Analyse de voix off pour production documentaire. ASR local, analyse LLM, mise à jour structurée. |
 
 ---
 
 ## Hooks
 
-Scripts d'automatisation prêts à l'emploi pour les hooks de Claude Code.
+Scripts d'automatisation prêts à l'emploi pour les hooks de l'agent.
 
 | Script | Ce qu'il fait |
 |--------|-------------|
@@ -102,7 +102,7 @@ chmod +x ~/.claude/scripts/*.sh
 
 ## Accès distant
 
-[Toutes les façons de faire tourner Claude Code à distance](remote/access-guide.md) — depuis un iPhone, une tablette ou une autre machine. Comparaison en conditions réelles, pas une fiche technique.
+[Toutes les façons de faire tourner l'agent à distance](remote/access-guide.md) — depuis un iPhone, une tablette ou une autre machine. Comparaison en conditions réelles, pas une fiche technique.
 
 | Méthode | UX mobile | Fiabilité | Installation |
 |--------|-----------|-------------|-------|
@@ -110,7 +110,7 @@ chmod +x ~/.claude/scripts/*.sh
 | Mosh + tmux | Correcte | Meilleure | Moyenne |
 | Pont Telegram Bot | Bonne | Bonne | Élevée |
 | OpenClaw (app iOS) | Bonne | Bonne | Faible |
-| Claude Remote Control | Meilleure | Bêta | Faible |
+| Remote Control natif | Meilleure | Bêta | Faible |
 | Bureau à distance (AnyDesk/Jump) | Correcte | Bonne | Faible |
 
 ---
@@ -136,7 +136,7 @@ L'inventaire complet. [Détail →](setup/overview.md)
 
 **Les specs avant le code.** Chaque projet commence par une phase d'interview. Pas d'implémentation sans specs. Deux skills personnalisés l'imposent : `/interview` et `/pitch`.
 
-**7 règles de qualité** intégrées au CLAUDE.md :
+**7 règles de qualité** intégrées au fichier d'instructions :
 
 1. **Anti-hallucination** — jamais de données simulées, inventées ou approximatives
 2. **Retour au mode plan** — si un fix échoue, on s'arrête. On ne s'enfonce pas. On replanifie.
@@ -152,7 +152,7 @@ L'inventaire complet. [Détail →](setup/overview.md)
 
 | Couche | Outils |
 |-------|-------|
-| **IA** | Claude Code Max (200$/mois), Opus 4.6 + Sonnet 4.6, Agent Teams |
+| **IA** | Plan Max (200$/mois), modèles frontière, Agent Teams |
 | **Terminal** | Ghostty (GPU), tmux, cmux |
 | **Matériel** | MacBook Air M3 + Mac Mini M4 (24/7) + PC RTX 5090 |
 | **Réseau** | VPN maillé Tailscale, mosh |
@@ -187,7 +187,7 @@ L'inventaire complet. [Détail →](setup/overview.md)
 ## Influences
 
 - [Trail of Bits](https://github.com/trailofbits/claude-code-config) — réglages de sécurité tranchés
-- [@bcherny](https://x.com/bcherny) (créateur de Claude Code) — conseils d'équipe
+- [@bcherny](https://x.com/bcherny) (créateur du CLI) — conseils d'équipe
 - [@gmoneyNFT](https://x.com/gmoneyNFT) — 25 leçons d'un usage quotidien multi-agents
 - [@__BOMO](https://x.com/__BOMO) — statusline d'usage du contexte
 
