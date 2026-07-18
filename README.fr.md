@@ -1,8 +1,6 @@
-[English](README.md) · **Français**
+<img src="banner.svg" alt="Agentic CLI for Filmmakers" width="100%">
 
-<p align="center">
-  <img src="assets/header-banner.jpg" alt="Claude Code Filmmaker" width="100%"/>
-</p>
+[English](README.md) · **Français**
 
 Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un vrai setup, personnel, construit par un artiste qui utilise Claude Code tous les jours pour le cinéma, les outils créatifs et le vibe coding.
 

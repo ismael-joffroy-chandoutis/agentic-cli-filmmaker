@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="Agentic CLI for Filmmakers">
+  <rect x="0" y="0" width="1280" height="400" fill="#0B0B0C"/>
+  <g fill="none" stroke="#3A3A3C" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="1000,160 1018,177 1000,194" stroke-width="2"/>
+    <line x1="1034" y1="177" x2="1120" y2="177" stroke-width="2"/>
+    <line x1="1000" y1="222" x2="1205" y2="222" stroke-width="1"/>
+    <line x1="1000" y1="250" x2="1150" y2="250" stroke-width="1"/>
+  </g>
+  <rect x="1130" y="165" width="12" height="24" fill="#FF4400"/>
+  <text x="80" y="190" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="300" font-size="60" letter-spacing="1" fill="#EDEAE3">Agentic CLI for Filmmakers</text>
+  <text x="82" y="228" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="400" font-size="20" fill="#8F8B84">Daily practice of an agentic terminal in a film studio. Real configs, real patterns.</text>
+</svg>
