@@ -4,6 +4,8 @@
 
 Pas un tutoriel pour développeurs. Pas un guide de prompt engineering. C'est un vrai setup, personnel, construit par un artiste qui utilise un CLI de code agentique tous les jours pour le cinéma, les outils créatifs et le vibe coding.
 
+<img src="monde.jpg" alt="agentic-cli-filmmaker" width="100%">
+
 **Config. Patterns. Hooks. Accès distant. Tout au même endroit.**
 
 La méthode est agnostique au CLI. Cette note de terrain documente l'instance actuelle, Claude Code ; quand la pratique bougera, la note de terrain suivante documentera l'instrument suivant.
