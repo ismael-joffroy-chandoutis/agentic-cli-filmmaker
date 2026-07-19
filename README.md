@@ -30,7 +30,7 @@ This repo documents the actual configuration, decisions, and patterns that emerg
 ## What's inside
 
 ```
-claude-code-filmmaker/
+agentic-cli-filmmaker/
 ├── config/       # Global instructions structure, settings.json annotated
 ├── patterns/     # 14 reusable patterns (tmux, memory, notifications, agent teams...)
 ├── hooks/        # Push notifications, auto tab naming, tmux layout management

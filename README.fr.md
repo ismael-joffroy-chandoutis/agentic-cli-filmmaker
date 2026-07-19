@@ -30,7 +30,7 @@ Ce dépôt documente la configuration réelle, les décisions et les patterns qu
 ## Contenu
 
 ```
-claude-code-filmmaker/
+agentic-cli-filmmaker/
 ├── config/       # Structure des instructions globales, settings.json annoté
 ├── patterns/     # 14 patterns réutilisables (tmux, mémoire, notifications, agent teams...)
 ├── hooks/        # Notifications push, nommage auto des onglets, gestion du layout tmux

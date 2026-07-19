@@ -253,7 +253,7 @@ Or from within an existing session:
 | **Full env access** | Yes | Yes | Yes | No | Yes (MCP) | Partial | Yes |
 | **Session persistence** | tmux | tmux | tmux | N/A | N/A | Yes (memory) | Yes |
 | **Cost** | Free | $20 | $10/mo | ~$5 one-time | Max plan | API tokens | Max plan |
-| **Security** | SSH (solid) | SSH+Mosh | SSH | HTTPS | Session string | ⚠️ CVE risk | TLS/Anthropic |
+| **Security** | SSH (solid) | SSH+Mosh | SSH | HTTPS | Session string | CVE risk | TLS/Anthropic |
 | **Notifications** | No | No | No | Yes (Pushover) | Via bot | Partial | No |
 | **Multi-session** | Yes (tmux) | Yes (tmux) | Yes (tmux) | N/A | N/A | No | No (1 per process) |
 | **Official Anthropic** | N/A | N/A | N/A | N/A | N/A | No | Yes |
