@@ -172,6 +172,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 |-------|-------|
 | [On Agentic Engineering](essays/2026-02-25-on-agentic-engineering.md) | Notes from a filmmaker who's been through multiple technological ruptures, and recognizes this one. |
 | [The Adoption Ladder and the Scripte](essays/2026-07-17-the-adoption-ladder-and-the-scripte.md) ([FR](essays/2026-07-17-the-adoption-ladder-and-the-scripte.fr.md)) | What an engineering AI-maturity model misses about creative work: cinema's verification loops were made of people, and a solo practice has to rebuild them as agents. |
+| [Editing with Agents, by Type of Work](essays/2026-09-13-editing-with-agents-by-type-of-work.md) ([FR](essays/2026-09-13-editing-with-agents-by-type-of-work.fr.md)) | No single stack serves a feature cut, a hybrid VFX pipeline, social clips and tech demos. One table per type of work: where the cut is judged, what the agent reads and writes, through which channel. With measurements from the Resolve 21.1 native MCP, HyperFrames and Remotion. |
 
 ## Journal
 

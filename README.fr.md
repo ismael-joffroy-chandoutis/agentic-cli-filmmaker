@@ -172,6 +172,7 @@ L'inventaire complet. [Détail →](setup/overview.md)
 |-------|-------|
 | [On Agentic Engineering](essays/2026-02-25-on-agentic-engineering.md) | Notes d'un cinéaste qui a traversé plusieurs ruptures technologiques, et reconnaît celle-ci. |
 | [L'échelle d'adoption et la scripte](essays/2026-07-17-the-adoption-ladder-and-the-scripte.fr.md) ([EN](essays/2026-07-17-the-adoption-ladder-and-the-scripte.md)) | Ce qu'un modèle de maturité d'ingénieur ne voit pas du travail créatif : les boucles de vérification du cinéma étaient faites de personnes, une pratique solo doit les reconstruire en agents. |
+| [Monter avec des agents, par type de travail](essays/2026-09-13-editing-with-agents-by-type-of-work.fr.md) ([EN](essays/2026-09-13-editing-with-agents-by-type-of-work.md)) | Aucun stack unique ne sert à la fois un long métrage, un pipeline VFX hybride, des extraits réseaux et des démonstrations techniques. Une table par type de travail : où se juge le montage, ce que l'agent lit et écrit, par quel canal. Avec des mesures du MCP natif Resolve 21.1, d'HyperFrames et de Remotion. |
 
 ## Journal
 
