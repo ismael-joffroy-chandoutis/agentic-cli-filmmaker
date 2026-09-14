@@ -2,7 +2,7 @@
 
 # Agent-driven editing: the ranking, phase by phase
 
-*Field note, 14 September 2026. Companion to [Editing with agents, by type of work](2026-09-13-editing-with-agents-by-type-of-work.md). That text explains the position. This one is the tables: which tool for which phase, which machine, which channel, and what died. Written for someone who does not live in an editing suite. Everything marked "measured" was run on my own machines between 13 and 14 September; the rest is read from documentation and repositories the same day.*
+*Field note, 14 September 2026, updated the same morning with two more tests. Companion to [Editing with agents, by type of work](2026-09-13-editing-with-agents-by-type-of-work.md). That text explains the position. This one is the tables: which tool for which phase, which machine, which channel, and what died. Written for someone who does not live in an editing suite. Everything marked "measured" was run on my own machines between 13 and 14 September; the rest is read from documentation and repositories the same day.*
 
 ## In three sentences
 
@@ -12,24 +12,24 @@ Lexicon: **base** = you can lean on it today · **lab** = interesting, worth an 
 
 ## 0. Phase by phase: what you do, where, and what the agent does
 
-| Phase | What you do | Where you are | What the agent does, through which channel | Headless |
-|---|---|---|---|---|
-| 1a. Collect references | Hunt, link, annotate | Are.na (open API); Freeform on iPad for the sofa wall; Kosmik set aside (no API) | Files, links, retrieves (Are.na API) | yes |
-| 1b. Think a scene on a wall, compare worlds | Place, compare, discard, keep; generate next to the source | A local shot-store board as the truth; basketikun infinite-canvas (MIT, MCP, canvas.best is its hosted version) as the lab; Martini for wall plus timeline plus 3D set, closed | Places media, generates variants linked to their source (ComfyUI on the towers); basketikun's MCP verified against its own store | no, it is for the eye; the server, yes |
-| 1c. Wire a recipe that repeats | Once the look is locked: same character, twenty shots | OpenChar Studio (ex Inline, GPL, versioned takes, ComfyUI backend); Flora and Krea Nodes, closed; NodeTool (AGPL, official MCP) as a workshop | Re-runs the recipe, recomputes only downstream, keeps every take | yes |
-| 1d. Continuity of characters and sets | Decide what never changes | Visual bible on the board; Raccord (MIT, MCP) and OpenChar for drift measurement; LoRAs on the towers | Measures drift, keeps the bible, re-runs | yes |
-| 2. Writing, breakdown | Write, break down, decide | Text: Obsidian, Notion; a home-made story curve | Transcribes, structures, proposes the curve, keeps the journal | yes |
-| 3. Boards and animatic | Judge rhythm before paying for a generation | Blender VSE plus Grease Pencil, or Resolve; Storyboarder for its ergonomics only | Aligns boards on temp sound, renders the animatic (`bpy`, Resolve MCP) | yes (Blender in background) |
-| 4. Live shoot | Film what must be embodied | Blackmagic 6K, iPhone ProRes log | Ingest, LUT, transcription, shot register (Kitsu with a crew) | yes |
-| 5. Generating images and shots | Choose the take that stays | The board (versioned takes) over ComfyUI on the towers; Krita AI for stills; Pallaidium to test | Generates, versions, writes the sidecar and the C2PA (ComfyUI API, MCP) | yes |
-| 6. Compositing and VFX | The eye on detail, shot by shot | Resolve Fusion (Studio); Blender compositor for 3D; Natron in the lab | Places a version at timecode, disables the old one (native MCP, verified) | app open |
-| 7a. Cutting the film, documentary and narrative | Cut the meaning, with a Final Cut editor | Final Cut Pro | Prepares: selects, first assembly, markers, as FCPXML files | preparation yes, cut no |
-| 7b. Cutting excerpts and social | Review, give the go | Palmier driven by a coding agent (measured), or ffmpeg plus a pipeline runner with no interface | Cuts, subtitles, reframes, exports FCPXML to Final Cut or Resolve (Palmier MCP, 51 tools) | Palmier: app open; ffmpeg: yes |
-| 7c. Hybrid cut, VFX | Arbitrate generated shots | Resolve Studio, Mac and Windows | Everything it does alone on a timeline (native MCP) | app open |
-| 8. Sound | Listen, mix, or the mixer | REAPER (scriptable); Fairlight in Resolve | Transcribes (Parakeet), cleans, normalises, fades (Resolve MCP verified) | partial |
-| 9. Colour and conform | Grade, or the colourist | Resolve Studio; OpenColorIO; OTIO and FCPXML bridge | Imports structure, exports, relinks media (verified on Palmier's FCPXML) | export yes |
-| 10. Delivery | Give the go | Compressor; DCP-o-matic | Encodes, declines, subtitles (ffmpeg, HandBrake, whisper) | yes |
-| 11. Demos, motion, titles | Review, decide the graphics | Remotion, HyperFrames for the web; Apple Motion inside a film | Writes and renders (measured) | yes for the web |
+| Phase | What you do | Where you are | What the agent does, through which channel | Headless | My choice, in a few words |
+|---|---|---|---|---|---|
+| 1a. Collect references | Hunt, link, annotate | Are.na (open API); Freeform on iPad for the sofa wall; Kosmik set aside (no API) | Files, links, retrieves (Are.na API) | yes | Are.na: the API is alive |
+| 1b. Think a scene on a wall, compare worlds | Place, compare, discard, keep; generate next to the source | A local shot-store board as the truth; basketikun infinite-canvas (MIT, MCP, canvas.best is its hosted version) as the lab; Martini for wall plus timeline plus 3D set, closed | Places media, generates variants linked to their source (ComfyUI on the towers); basketikun's MCP verified against its own store | no, it is for the eye; the server, yes | the board: named takes, ComfyUI; 1a and 1b share one surface once it imports Are.na |
+| 1c. Wire a recipe that repeats | Once the look is locked: same character, twenty shots | OpenChar Studio (ex Inline, GPL, versioned takes, ComfyUI backend); Flora and Krea Nodes, closed; NodeTool (AGPL, official MCP) as a workshop | Re-runs the recipe, recomputes only downstream, keeps every take | yes | OpenChar: versioned takes, GPL; never a second graph tool to escape ComfyUI |
+| 1d. Continuity of characters and sets | Decide what never changes | Visual bible on the board; Raccord (MIT, MCP) and OpenChar for drift measurement; LoRAs on the towers | Measures drift, keeps the bible, re-runs | yes | the bible on the board, Raccord measures |
+| 2. Writing, breakdown | Write, break down, decide | Text: Obsidian, Notion; a home-made story curve | Transcribes, structures, proposes the curve, keeps the journal | yes | Obsidian alone for writing; Notion as a one-way mirror for the team |
+| 3. Boards and animatic | Judge rhythm before paying for a generation | Blender VSE plus Grease Pencil, or Resolve; Storyboarder for its ergonomics only | Aligns boards on temp sound, renders the animatic (`bpy`, Resolve MCP) | yes (Blender in background) | Resolve when the boards are images (the animatic becomes the cut); Blender when the line or the camera matters (every angle already exists) |
+| 4. Live shoot | Film what must be embodied | Blackmagic 6K, iPhone ProRes log | Ingest, LUT, transcription, shot register (Kitsu with a crew) | yes | ffmpeg, an indexer, Parakeet |
+| 5. Generating images and shots | Choose the take that stays | The board (versioned takes) over ComfyUI on the towers; Krita AI for stills; Pallaidium to test | Generates, versions, writes the sidecar and the C2PA (ComfyUI API, MCP) | yes | ComfyUI on the towers through the board; Pallaidium in remote mode inside Blender (measured, Mac included); simple fronts over ComfyUI, never another graph |
+| 6. Compositing and VFX | The eye on detail, shot by shot | Resolve Fusion (Studio); Blender compositor for 3D; Natron in the lab | Places a version at timecode, disables the old one (native MCP, verified) | app open | Fusion, the shot stays in the timeline; Blender for its own passes; Natron when it is stable; After Effects only when delivered |
+| 7a. Cutting the film, documentary and narrative | Cut the meaning, with a Final Cut editor | Final Cut Pro | Prepares: selects, first assembly, markers, as FCPXML files | preparation yes, cut no | Final Cut: my cut, my editor |
+| 7b. Cutting excerpts and social | Review, give the go | Palmier driven by a coding agent (measured), or ffmpeg plus a pipeline runner with no interface | Cuts, subtitles, reframes, exports FCPXML to Final Cut or Resolve (Palmier MCP, 51 tools) | Palmier: app open; ffmpeg: yes | Palmier, under a second per cut, then Final Cut without a dialog |
+| 7c. Hybrid cut, VFX | Arbitrate generated shots | Resolve Studio, Mac and Windows | Everything it does alone on a timeline (native MCP) | app open | Resolve, the agent's host |
+| 8. Sound | Listen, mix, or the mixer | REAPER (scriptable); Fairlight in Resolve | Transcribes (Parakeet), cleans, normalises, fades (Resolve MCP verified) | partial | REAPER for the mix, Fairlight for what lives in the timeline, ffmpeg and auto-editor headless; a full sound ranking follows |
+| 9. Colour and conform | Grade, or the colourist | Resolve Studio; OpenColorIO; OTIO and FCPXML bridge | Imports structure, exports, relinks media (verified on Palmier's FCPXML) | export yes | Resolve plus OTIO, structure only |
+| 10. Delivery | Give the go | Compressor; DCP-o-matic | Encodes, declines, subtitles (ffmpeg, HandBrake, whisper) | yes | ffmpeg, Compressor, DCP-o-matic |
+| 11. Demos, motion, titles | Review, decide the graphics | Remotion, HyperFrames for the web; Apple Motion inside a film | Writes and renders (measured) | yes for the web | Remotion for components, HyperFrames and its local Studio for a page, Motion by cloning templates |
 
 Two rules run through the table: between 7a and 7c the split is by sequence, never by shot; and the agent channel exists only on desktop machines, the iPad is for reviewing.
 
@@ -228,11 +228,30 @@ Reading rule, corrected after a detailed report with dated sources: a repository
 | Steerable-Motion (banodoco) | slowly alive, Wan/VACE path added | archive the AnimateDiff graphs; LTX multi-guides, Wan first/last, FramePack for new work |
 | OTIO-AVFoundation, Text_to_Video_Markers, reuelk/pipeline | finished, not abandoned | keep for their case; fcp-mcp-server (DareDev256) or fcp-mcp (dreliq9) to write FCPXML 1.13 |
 
+## 4 bis. The morning after: Pallaidium in remote mode, HyperFrames Studio, and where I land
+
+Two more tests before dawn changed two rows.
+
+**Pallaidium works in remote mode, on a Mac.** The add-on ships three "remote backend" connectors in plain Python, no pip: a ComfyUI adapter, a fal.ai adapter and a mock. The adapter speaks a small `/v1` contract (health, models, image, video, speech, jobs, files) and forwards each model to a ComfyUI workflow file dropped in a folder, parameters injected by node title. Started on the laptop against the ComfyUI of an RTX 5090 tower, Blender 5.2.1 headless registered five remote models, and `sequencer.generate_image` placed a FLUX schnell frame in the VSE in 6.9 seconds, rendered from the timeline afterwards. Two defects on the way, both patched locally and worth an upstream report: the operator still imports `torch` before it looks at the backend, and the remote plugin returns a file path where the operator expects a PIL image. The row moves from "to test on a tower" to a base for phase 5 whenever the work is in Blender; the tower computes, Blender only carries the adapter. The same `/v1` contract is reusable by any script, and the fal adapter covers the "paid API only when nothing local exists" case.
+
+![The image generated through Pallaidium's ComfyUI adapter on a remote tower, from a headless Blender on the laptop](assets/2026-09-14/pallaidium-remote-flux-torrent.jpg)
+
+![The same frame rendered from Blender's VSE timeline, where Pallaidium placed it as an image strip](assets/2026-09-14/blender-vse-remote-strip.jpg)
+
+**HyperFrames Studio exists and runs locally.** `npx hyperframes preview` opens a visual editor in the browser, no HeyGen account: storyboard, live preview, a clip timeline, layers and a design inspector, a "describe a change to the agent" box, gesture recording and export. It does not change the verdict (a page is still a page), it lowers the cost of the last ten percent, the timing pass a human wants to do by eye.
+
+![HyperFrames Studio on the repository presentation rendered the day before](assets/2026-09-14/hyperframes-studio.png)
+
+**Where I land, phase by phase**, now in the last column of the first table. Three calls worth spelling out. Writing: Obsidian alone, Markdown on disk the agent reads and writes natively, with Notion as a one-way mirror for the team, never the place where the text moves. Animatic: Resolve when the boards are already images, because the animatic then becomes the timeline of the cut; Blender when the line or the camera matters, because a blocked-out set gives every angle for free and its grey render is the best input a video model can get. Compositing: Fusion by default, since the shot stays in the timeline where it is judged; Blender's compositor when the passes come from Blender; Natron the day a stable build lands on Apple Silicon, because an open, headless compositor on the towers is what the social line needs.
+
+**Palmier and your own keys.** Palmier Pro generates only through its credits (250 at sign-up, then a subscription), with no personal key and no ComfyUI. The fork that does it is Frontstage (GPL port of Palmier 0.7.6): fal.ai key for generation, OpenRouter key for the agent, Whisper local, same MCP port; no ComfyUI either, an unsigned Windows binary, web or build-from-source on a Mac. The route without credits or a fork: generate outside (the board, or Pallaidium's `/v1` contract to ComfyUI or fal) and place the media in Palmier through its MCP (`import_media`, `add_clips`). Same gesture, no credits.
+
 ## 5. The one-hour tests, in order
 
 1. **Palmier**: done, passed. The excerpt line has its tool.
 2. **Velorn**: same protocol, FCPXML out to Resolve. Started, not finished.
-3. **Pallaidium on a Windows tower** (Blender 5.2, NVIDIA): one generated shot placed as a VSE strip, VRAM measured. Installed, not run.
+3. **Pallaidium**: done, passed in remote mode from the Mac (see 4 bis). Video through `ltx-2.3-i2v` still to run: the bundled workflow expects an fp8 checkpoint and two LoRAs the tower does not have.
+3 bis. **Wan2GP and SwarmUI**: simple fronts over ComfyUI, one hour each on a tower.
 4. **basketikun infinite-canvas** in Docker: one media placed by a coding agent through its MCP, reopened. Done.
 5. **OTIO round trip** between the local board and Resolve. Planned.
 

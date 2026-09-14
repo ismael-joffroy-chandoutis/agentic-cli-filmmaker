@@ -2,7 +2,7 @@
 
 # Montage piloté par agent : le classement, phase par phase
 
-*Note de terrain, 14 septembre 2026. Compagnon de [Monter avec des agents, par type de travail](2026-09-13-editing-with-agents-by-type-of-work.fr.md). Ce texte-là explique la position. Celui-ci, ce sont les tableaux : quel outil pour quelle phase, quelle machine, quel canal, et ce qui est mort. Écrit pour quelqu'un qui ne vit pas dans une salle de montage. Tout ce qui est marqué « mesuré » a tourné sur mes propres machines entre le 13 et le 14 septembre ; le reste est lu dans les documentations et les dépôts le même jour.*
+*Note de terrain, 14 septembre 2026, mise à jour le matin même avec deux tests de plus. Compagnon de [Monter avec des agents, par type de travail](2026-09-13-editing-with-agents-by-type-of-work.fr.md). Ce texte-là explique la position. Celui-ci, ce sont les tableaux : quel outil pour quelle phase, quelle machine, quel canal, et ce qui est mort. Écrit pour quelqu'un qui ne vit pas dans une salle de montage. Tout ce qui est marqué « mesuré » a tourné sur mes propres machines entre le 13 et le 14 septembre ; le reste est lu dans les documentations et les dépôts le même jour.*
 
 ## En trois phrases
 
@@ -12,24 +12,24 @@ Lexique : **socle** = on peut s'y appuyer aujourd'hui · **labo** = intéressant
 
 ## 0. Phase par phase : ce que tu fais, où, et ce que fait l'agent
 
-| Phase | Ce que tu fais | Où tu es | Ce que fait l'agent, par quel canal | Headless |
-|---|---|---|---|---|
-| 1a. Collecter des références | Chiner, relier, annoter | Are.na (API ouverte) ; Freeform sur iPad pour le mur du canapé ; Kosmik écarté (pas d'API) | Range, relie, retrouve (API Are.na) | oui |
-| 1b. Penser une scène sur un mur, comparer des mondes | Poser, comparer, jeter, garder ; générer à côté de la source | Un board maison au-dessus d'un magasin de plans comme vérité ; basketikun infinite-canvas (MIT, MCP, canvas.best est sa version hébergée) comme labo ; Martini pour le mur plus timeline plus set 3D, fermé | Pose des médias, génère des variantes reliées à leur source (ComfyUI sur les tours) ; le MCP de basketikun vérifié sur son propre store | non, c'est pour l'œil ; le serveur, oui |
-| 1c. Câbler une recette qui se répète | Une fois le look verrouillé : même personnage, vingt plans | OpenChar Studio (ex Inline, GPL, prises versionnées, ComfyUI en back) ; Flora et Krea Nodes, fermés ; NodeTool (AGPL, MCP officiel) en atelier | Relance la recette, ne recalcule que l'aval, garde chaque prise | oui |
-| 1d. Continuité de personnages et de décors | Décider ce qui ne change jamais | Bible visuelle sur le board ; Raccord (MIT, MCP) et OpenChar pour mesurer la dérive ; LoRA sur les tours | Mesure la dérive, tient la bible, relance | oui |
-| 2. Écriture, découpage | Écrire, découper, décider | Texte : Obsidian, Notion ; une courbe narrative maison | Transcrit, structure, propose la courbe, tient le journal | oui |
-| 3. Boards et animatique | Juger le rythme avant de payer une génération | Blender VSE plus Grease Pencil, ou Resolve ; Storyboarder pour l'ergonomie seulement | Aligne les boards sur le son temporaire, rend l'animatique (`bpy`, MCP Resolve) | oui (Blender en arrière-plan) |
-| 4. Tournage réel | Filmer ce qui doit être incarné | Blackmagic 6K, iPhone ProRes log | Ingestion, LUT, transcription, registre de plans (Kitsu avec une équipe) | oui |
-| 5. Génération d'images et de plans | Choisir la prise qui reste | Le board (prises versionnées) au-dessus de ComfyUI sur les tours ; Krita AI pour l'image fixe ; Pallaidium à tester | Génère, versionne, écrit le sidecar et le C2PA (API ComfyUI, MCP) | oui |
-| 6. Compositing et VFX | Le regard sur le détail, plan par plan | Resolve Fusion (Studio) ; compositeur Blender pour la 3D ; Natron en labo | Pose une version au timecode, désactive l'ancienne (MCP natif, vérifié) | app ouverte |
-| 7a. Montage du film, documentaire et narratif | Couper le sens, avec un monteur Final Cut | Final Cut Pro | Prépare : sélections, ours, marqueurs, en fichiers FCPXML | préparation oui, coupe non |
-| 7b. Montage d'extraits et de réseaux | Relire, donner le go | Palmier piloté par un agent de code (mesuré), ou ffmpeg plus un exécuteur de recettes sans interface | Coupe, sous-titre, recadre, exporte en FCPXML vers Final Cut ou Resolve (MCP Palmier, 51 outils) | Palmier : app ouverte ; ffmpeg : oui |
-| 7c. Montage hybride, VFX | Arbitrer les plans générés | Resolve Studio, Mac et Windows | Tout ce qu'il fait seul sur une timeline (MCP natif) | app ouverte |
-| 8. Son | Écouter, mixer, ou le mixeur | REAPER (scriptable) ; Fairlight dans Resolve | Transcrit (Parakeet), nettoie, normalise, fondus (MCP Resolve vérifié) | partiel |
-| 9. Couleur et conformation | Étalonner, ou l'étalonneur | Resolve Studio ; OpenColorIO ; pont OTIO et FCPXML | Importe la structure, exporte, relie les médias (vérifié sur le FCPXML de Palmier) | export oui |
-| 10. Livraison | Donner le go | Compressor ; DCP-o-matic | Encode, décline, sous-titre (ffmpeg, HandBrake, whisper) | oui |
-| 11. Démos, motion, habillage | Relire, décider du graphisme | Remotion, HyperFrames pour le web ; Apple Motion dans un film | Écrit et rend (mesuré) | oui pour le web |
+| Phase | Ce que tu fais | Où tu es | Ce que fait l'agent, par quel canal | Headless | Mon choix, en quelques mots |
+|---|---|---|---|---|---|
+| 1a. Collecter des références | Chiner, relier, annoter | Are.na (API ouverte) ; Freeform sur iPad pour le mur du canapé ; Kosmik écarté (pas d'API) | Range, relie, retrouve (API Are.na) | oui | Are.na, l'API vit |
+| 1b. Penser une scène sur un mur, comparer des mondes | Poser, comparer, jeter, garder ; générer à côté de la source | Un board maison au-dessus d'un magasin de plans comme vérité ; basketikun infinite-canvas (MIT, MCP, canvas.best est sa version hébergée) comme labo ; Martini pour le mur plus timeline plus set 3D, fermé | Pose des médias, génère des variantes reliées à leur source (ComfyUI sur les tours) ; le MCP de basketikun vérifié sur son propre store | non, c'est pour l'œil ; le serveur, oui | le board : prises nommées, ComfyUI ; 1a et 1b sur la même surface dès qu'il importe Are.na |
+| 1c. Câbler une recette qui se répète | Une fois le look verrouillé : même personnage, vingt plans | OpenChar Studio (ex Inline, GPL, prises versionnées, ComfyUI en back) ; Flora et Krea Nodes, fermés ; NodeTool (AGPL, MCP officiel) en atelier | Relance la recette, ne recalcule que l'aval, garde chaque prise | oui | OpenChar : prises versionnées, GPL ; jamais un deuxième outil à graphes pour fuir ComfyUI |
+| 1d. Continuité de personnages et de décors | Décider ce qui ne change jamais | Bible visuelle sur le board ; Raccord (MIT, MCP) et OpenChar pour mesurer la dérive ; LoRA sur les tours | Mesure la dérive, tient la bible, relance | oui | la bible sur le board, Raccord mesure |
+| 2. Écriture, découpage | Écrire, découper, décider | Texte : Obsidian, Notion ; une courbe narrative maison | Transcrit, structure, propose la courbe, tient le journal | oui | Obsidian seul pour écrire ; Notion en miroir vers l'équipe, dans un sens |
+| 3. Boards et animatique | Juger le rythme avant de payer une génération | Blender VSE plus Grease Pencil, ou Resolve ; Storyboarder pour l'ergonomie seulement | Aligne les boards sur le son temporaire, rend l'animatique (`bpy`, MCP Resolve) | oui (Blender en arrière-plan) | Resolve quand les boards sont des images (l'animatique devient le montage) ; Blender quand le trait ou la caméra comptent (tous les angles existent déjà) |
+| 4. Tournage réel | Filmer ce qui doit être incarné | Blackmagic 6K, iPhone ProRes log | Ingestion, LUT, transcription, registre de plans (Kitsu avec une équipe) | oui | ffmpeg, un indexeur, Parakeet |
+| 5. Génération d'images et de plans | Choisir la prise qui reste | Le board (prises versionnées) au-dessus de ComfyUI sur les tours ; Krita AI pour l'image fixe ; Pallaidium à tester | Génère, versionne, écrit le sidecar et le C2PA (API ComfyUI, MCP) | oui | ComfyUI sur les tours par le board ; Pallaidium en mode distant dans Blender (mesuré, Mac compris) ; des fronts simples au-dessus de ComfyUI, jamais un autre graphe |
+| 6. Compositing et VFX | Le regard sur le détail, plan par plan | Resolve Fusion (Studio) ; compositeur Blender pour la 3D ; Natron en labo | Pose une version au timecode, désactive l'ancienne (MCP natif, vérifié) | app ouverte | Fusion, le plan reste dans la timeline ; Blender pour ses propres passes ; Natron quand il sera stable ; After Effects seulement si livré |
+| 7a. Montage du film, documentaire et narratif | Couper le sens, avec un monteur Final Cut | Final Cut Pro | Prépare : sélections, ours, marqueurs, en fichiers FCPXML | préparation oui, coupe non | Final Cut : ma coupe, mon monteur |
+| 7b. Montage d'extraits et de réseaux | Relire, donner le go | Palmier piloté par un agent de code (mesuré), ou ffmpeg plus un exécuteur de recettes sans interface | Coupe, sous-titre, recadre, exporte en FCPXML vers Final Cut ou Resolve (MCP Palmier, 51 outils) | Palmier : app ouverte ; ffmpeg : oui | Palmier, moins d'une seconde par coupe, puis Final Cut sans dialogue |
+| 7c. Montage hybride, VFX | Arbitrer les plans générés | Resolve Studio, Mac et Windows | Tout ce qu'il fait seul sur une timeline (MCP natif) | app ouverte | Resolve, l'hôte de l'agent |
+| 8. Son | Écouter, mixer, ou le mixeur | REAPER (scriptable) ; Fairlight dans Resolve | Transcrit (Parakeet), nettoie, normalise, fondus (MCP Resolve vérifié) | partiel | REAPER pour le mix, Fairlight pour ce qui vit dans la timeline, ffmpeg et auto-editor en headless ; un classement complet du son suit |
+| 9. Couleur et conformation | Étalonner, ou l'étalonneur | Resolve Studio ; OpenColorIO ; pont OTIO et FCPXML | Importe la structure, exporte, relie les médias (vérifié sur le FCPXML de Palmier) | export oui | Resolve plus OTIO, structure seulement |
+| 10. Livraison | Donner le go | Compressor ; DCP-o-matic | Encode, décline, sous-titre (ffmpeg, HandBrake, whisper) | oui | ffmpeg, Compressor, DCP-o-matic |
+| 11. Démos, motion, habillage | Relire, décider du graphisme | Remotion, HyperFrames pour le web ; Apple Motion dans un film | Écrit et rend (mesuré) | oui pour le web | Remotion pour les composants, HyperFrames et son Studio local pour une page, Motion par clonage de templates |
 
 Deux règles traversent la table : entre 7a et 7c le partage se fait par séquence, jamais par plan ; et le canal agent n'existe que sur les machines de bureau, l'iPad sert à relire.
 
@@ -228,11 +228,30 @@ Règle de lecture, corrigée après un rapport détaillé aux sources datées : 
 | Steerable-Motion (banodoco) | vivant lentement, voie Wan/VACE ajoutée | archiver les graphes AnimateDiff ; LTX multi-guides, Wan first/last, FramePack pour le neuf |
 | OTIO-AVFoundation, Text_to_Video_Markers, reuelk/pipeline | finis, pas abandonnés | garder pour leur cas ; fcp-mcp-server (DareDev256) ou fcp-mcp (dreliq9) pour écrire du FCPXML 1.13 |
 
+## 4 bis. Le lendemain matin : Pallaidium en mode distant, HyperFrames Studio, et où je me pose
+
+Deux tests de plus avant l'aube ont changé deux lignes.
+
+**Pallaidium marche en mode distant, sur un Mac.** L'add-on livre trois connecteurs « remote backend » en Python standard, sans pip : un adaptateur ComfyUI, un adaptateur fal.ai et un simulateur. L'adaptateur parle un petit contrat `/v1` (santé, modèles, image, vidéo, voix, tâches, fichiers) et renvoie chaque modèle vers un fichier de workflow ComfyUI déposé dans un dossier, les paramètres injectés par le titre des nœuds. Lancé sur le portable vers le ComfyUI d'une tour RTX 5090, Blender 5.2.1 sans écran a enregistré cinq modèles distants, et `sequencer.generate_image` a posé une image FLUX schnell dans le VSE en 6,9 secondes, rendue ensuite depuis la timeline. Deux défauts en chemin, tous deux corrigés localement et à remonter en amont : l'opérateur importe encore `torch` avant de regarder le backend, et le plugin distant renvoie un chemin de fichier là où l'opérateur attend une image PIL. La ligne passe de « à tester sur une tour » à socle de la phase 5 dès que le travail est dans Blender ; la tour calcule, Blender ne porte que l'adaptateur. Le même contrat `/v1` est réutilisable par n'importe quel script, et l'adaptateur fal couvre le cas « API payante seulement quand rien n'existe en local ».
+
+![L'image générée par l'adaptateur ComfyUI de Pallaidium sur une tour distante, depuis un Blender sans écran sur le portable](assets/2026-09-14/pallaidium-remote-flux-torrent.jpg)
+
+![La même image rendue depuis la timeline VSE de Blender, où Pallaidium l'a posée en strip](assets/2026-09-14/blender-vse-remote-strip.jpg)
+
+**HyperFrames Studio existe et tourne en local.** `npx hyperframes preview` ouvre un éditeur visuel dans le navigateur, sans compte HeyGen : storyboard, aperçu en direct, une timeline de clips, calques et inspecteur, une case « décris un changement à l'agent », l'enregistrement d'un geste et l'export. Ça ne change pas le verdict (une page reste une page), ça baisse le coût des dix derniers pour cent, la passe de timing qu'un humain veut faire à l'œil.
+
+![HyperFrames Studio sur la présentation de dépôt rendue la veille](assets/2026-09-14/hyperframes-studio.png)
+
+**Où je me pose, phase par phase**, maintenant dans la dernière colonne de la première table. Trois choix qui méritent une phrase. L'écriture : Obsidian seul, du Markdown sur disque que l'agent lit et écrit nativement, Notion en miroir vers l'équipe dans un seul sens, jamais le lieu où le texte bouge. L'animatique : Resolve quand les boards sont déjà des images, parce que l'animatique devient alors la timeline du montage ; Blender quand le trait ou la caméra comptent, parce qu'un décor en blocs donne tous les angles gratuitement et que son rendu gris est la meilleure entrée qu'un modèle vidéo puisse recevoir. Le compositing : Fusion par défaut, puisque le plan reste dans la timeline où il est jugé ; le compositeur de Blender quand les passes viennent de Blender ; Natron le jour où une version stable arrive sur Apple Silicon, parce qu'un compositeur ouvert et sans écran sur les tours est ce que la ligne réseaux demande.
+
+**Palmier et tes propres clés.** Palmier Pro génère seulement par ses crédits (250 à l'inscription, puis un abonnement), sans clé personnelle et sans ComfyUI. Le fork qui le fait est Frontstage (port GPL de Palmier 0.7.6) : clé fal.ai pour la génération, clé OpenRouter pour l'agent, Whisper en local, même port MCP ; pas de ComfyUI non plus, un binaire Windows non signé, le web ou la compilation sur Mac. La voie sans crédits ni fork : générer dehors (le board, ou le contrat `/v1` de Pallaidium vers ComfyUI ou fal) et poser le média dans Palmier par son MCP (`import_media`, `add_clips`). Même geste, zéro crédit.
+
 ## 5. Les tests d'une heure, dans l'ordre
 
 1. **Palmier** : fait, réussi. La ligne des extraits a son outil.
 2. **Velorn** : même protocole, FCPXML vers Resolve. Commencé, pas fini.
-3. **Pallaidium sur une tour Windows** (Blender 5.2, NVIDIA) : un plan généré posé en strip VSE, VRAM mesurée. Installé, pas lancé.
+3. **Pallaidium** : fait, réussi en mode distant depuis le Mac (voir 4 bis). Reste la vidéo par `ltx-2.3-i2v` : le workflow livré attend un checkpoint fp8 et deux LoRA que la tour n'a pas.
+3 bis. **Wan2GP et SwarmUI** : fronts simples au-dessus de ComfyUI, une heure chacun sur une tour.
 4. **basketikun infinite-canvas** en Docker : un média posé par un agent de code via son MCP, rouvert. Fait.
 5. **Aller-retour OTIO** entre le board local et Resolve. Prévu.
 
