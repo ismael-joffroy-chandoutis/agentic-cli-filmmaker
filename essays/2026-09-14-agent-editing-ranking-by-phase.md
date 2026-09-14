@@ -234,7 +234,7 @@ Two more tests before dawn changed two rows.
 
 **Pallaidium works in remote mode, on a Mac.** The add-on ships three "remote backend" connectors in plain Python, no pip: a ComfyUI adapter, a fal.ai adapter and a mock. The adapter speaks a small `/v1` contract (health, models, image, video, speech, jobs, files) and forwards each model to a ComfyUI workflow file dropped in a folder, parameters injected by node title. Started on the laptop against the ComfyUI of an RTX 5090 tower, Blender 5.2.1 headless registered five remote models, and `sequencer.generate_image` placed a FLUX schnell frame in the VSE in 6.9 seconds, rendered from the timeline afterwards. Two defects on the way, both patched locally and worth an upstream report: the operator still imports `torch` before it looks at the backend, and the remote plugin returns a file path where the operator expects a PIL image. The row moves from "to test on a tower" to a base for phase 5 whenever the work is in Blender; the tower computes, Blender only carries the adapter. The same `/v1` contract is reusable by any script, and the fal adapter covers the "paid API only when nothing local exists" case.
 
-![The image generated through Pallaidium's ComfyUI adapter on a remote tower, from a headless Blender on the laptop](assets/2026-09-14/pallaidium-remote-flux-torrent.jpg)
+![The image generated through Pallaidium's ComfyUI adapter on a remote tower, from a headless Blender on the laptop](assets/2026-09-14/pallaidium-remote-flux-tower.jpg)
 
 ![The same frame rendered from Blender's VSE timeline, where Pallaidium placed it as an image strip](assets/2026-09-14/blender-vse-remote-strip.jpg)
 
