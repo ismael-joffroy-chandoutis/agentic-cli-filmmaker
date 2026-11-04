@@ -180,6 +180,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 | Entry | Topic |
 |-------|-------|
 | [Genesis](journal/2026-02-15-genesis.md) | Day zero. Full audit against gmoney.eth's 25 tips. Resulted in 7 new rules, statusline, deny rules, memory logs. |
+| [A night of audit](journal/2026-11-04-a-night-of-audit.md) ([FR](journal/2026-11-04-une-nuit-d-audit.fr.md)) | 4 November 2026. What a session loads before the first word (85,000 to 95,000 tokens), the go that armed itself 23 times, 105 silent failures, staying agnostic, sessions becoming bots. |
 
 ## Sources
 

@@ -180,6 +180,7 @@ L'inventaire complet. [Détail →](setup/overview.md)
 | Entrée | Sujet |
 |-------|-------|
 | [Genesis](journal/2026-02-15-genesis.md) | Jour zéro. Audit complet face aux 25 conseils de gmoney.eth. A abouti à 7 nouvelles règles, la statusline, les règles de refus, les logs de mémoire. |
+| [Une nuit d'audit](journal/2026-11-04-une-nuit-d-audit.fr.md) ([EN](journal/2026-11-04-a-night-of-audit.md)) | 4 novembre 2026. Ce qu'une session charge avant le premier mot (85 000 à 95 000 tokens), le go qui s'armait seul 23 fois, 105 pannes silencieuses, rester agnostique, des sessions qui deviennent des bots. |
 
 ## Sources
 
