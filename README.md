@@ -181,6 +181,7 @@ The full inventory. [Detailed breakdown →](setup/overview.md)
 |-------|-------|
 | [Genesis](journal/2026-02-15-genesis.md) | Day zero. Full audit against gmoney.eth's 25 tips. Resulted in 7 new rules, statusline, deny rules, memory logs. |
 | [A night of audit](journal/2026-11-04-a-night-of-audit.md) ([FR](journal/2026-11-04-une-nuit-d-audit.fr.md)) | 4 November 2026. What a session loads before the first word (85,000 to 95,000 tokens), the go that armed itself 23 times, 105 silent failures, staying agnostic, sessions becoming bots. |
+| [Local versus API embeddings](journal/2026-11-05-local-versus-api-embeddings.md) ([FR](journal/2026-11-05-embeddings-locaux-contre-api.fr.md)) | 5 November 2026. A local embedding model (EmbeddingGemma 2 in mediarag) against Gemini Embedding 2 through the API, on a non-sensitive working corpus: five questions, 3 hits, 1 half, 1 miss on each side, 496 s against 33 s of indexing, about $0.12 for the paid run. |
 
 ## Sources
 
